@@ -16,6 +16,23 @@
         th:replace="~{fragments/inputField :: input ('City', 'city', 'text')}" />
       <input
         th:replace="~{fragments/inputField :: input ('Telephone', 'telephone', 'text')}" />
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Active</label>
+        <select 
+          style="
+              height: 30px;
+              border-color: #ccc;
+              margin-left: 15px;
+              color: #555555;
+              width: 58px;
+              padding-left: 8px;
+            "
+          th:field="*{active}"
+        >
+          <option th:value="1" th:text="Yes"></option>
+          <option th:value="0" th:text="No"></option>
+        </select>
+      </div>
     </div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
